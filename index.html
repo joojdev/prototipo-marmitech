@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Protótipo no Moodle</title>
+  <link rel="stylesheet" href="./styles.css">
+  <script src="./main.js" defer></script>
+</head>
+<body>
+  <div class="blackScreen">
+    <div id="firstModal" class="modal">
+      <p class="title">Você vai precisar de marmita dia (30/02)?</p>
+
+      <a href="./images/cardapio.jpg" target="_blank">Ver cardápio</a>
+
+      <div class="buttonGroup">
+        <button id="animal">
+          <img src="./images/frango.png" alt="Proteína Animal">
+          Eu quero!
+        </button>
+        <button id="vegetal">
+          <img src="./images/alface.png" alt="Proteína Vegetal">
+          Eu quero!
+        </button>
+      </div>
+
+      <button class="cancel">Não quero.</button>
+    </div>
+    <div id="secondModal" class="modal hidden">
+      <button id="return"><img src="./images/arrow.png" alt="Voltar"></button>
+      <p class="title">Preferências da Marmita</p>
+
+      <form id="marmitaForm">
+        <fieldset>
+          <legend>Tamanho</legend>
+          
+          <div class="formGroup">
+            <input type="radio" name="tamanho" id="pequena" checked>
+            <label for="pequena">Pequena</label>
+          </div>
+
+          <div class="formGroup">
+            <input type="radio" name="tamanho" id="media">
+            <label for="media">Média</label>
+          </div>
+        </fieldset>
+
+        <fieldset>
+          <legend>Opcionais</legend>
+
+          <div class="formGroup">
+            <input type="checkbox" name="opcionais[]" id="feijao" checked>
+            <label for="feijao">Feijão</label>
+          </div>
+
+          <div class="formGroup">
+            <input type="checkbox" name="opcionais[]" id="salada" checked>
+            <label for="salada">Salada</label>
+          </div>
+
+          <div class="formGroup">
+            <input type="checkbox" name="opcionais[]" id="sobremesa" checked>
+            <label for="sobremesa">Sobremesa</label>
+          </div>
+
+          <div class="formGroup">
+            <input type="checkbox" name="opcionais[]" id="suco" checked>
+            <label for="suco">Suco</label>
+          </div>
+        </fieldset>
+      </form>
+
+      <button id="send">Enviar</button>
+    </div>
+  </div>
+</body>
+</html>
